@@ -1,0 +1,271 @@
+﻿@page "/"  
+@using MySqlConnector;  
+@inject NavigationManager NavigationManager  
+
+<h1>Dashboard</h1>  
+<hr class="header-separator" />  
+
+@if (!IsLoggedIn)  
+{  
+   <div class="login-popup">  
+       <h2>Employee Login</h2>  
+       <label for="employeeId">Employee ID:</label>  
+       <input type="text" id="employeeId" @bind="EmployeeID" />  
+       <button @onclick="HandleLogin">Login</button>  
+       @if (!string.IsNullOrEmpty(LoginError))  
+       {  
+           <p class="error">@LoginError</p>  
+       }  
+   </div>  
+}  
+else  
+{  
+   <div class="top-right-menu" style="position: absolute; top: 10px; right: 25px; display: flex; flex-direction: column; align-items: flex-end;">  
+       <span style="margin-bottom: 10px;">@TodaysDate</span>  
+       <button @onclick="ToggleProfileMenu" style="background-color: blue; color: white; border: none; padding: 10px; border-radius: 5px;">Profile</button>  
+       @if (IsProfileMenuVisible)  
+       {  
+           <div class="profile-menu" style="margin-top: 10px; background-color: white; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">  
+               <button @onclick="ViewProfile" style="width: 100%; padding: 10px; border: none; background-color: transparent; text-align: left;">View Profile</button>  
+               <button @onclick="HandleLogout" style="width: 100%; padding: 10px; border: none; background-color: transparent; text-align: left;">Logout</button>  
+           </div>  
+       }  
+   </div>  
+
+   <h2>Welcome, @EmployeeName!</h2>  
+
+   <h2>Gym Status</h2>  
+   <div style="display: flex; justify-content: space-between;">  
+       <!-- Table for Today's statistics -->
+       <table style="width: 30%; margin-right: 20px;">  
+           <thead>  
+               <tr>  
+                   <th>Today</th>  
+               </tr>  
+               <tr>  
+                   <th>Category</th>  
+                   <th>Count</th>  
+               </tr>  
+           </thead>  
+           <tbody>  
+               <tr>  
+                   <td>Total Members</td>  
+                   <td>@TotalMembers</td>  
+               </tr>  
+               <tr>  
+                   <td>Active Members</td>  
+                   <td>@ActiveMembers</td>  
+               </tr>  
+               <tr>  
+                   <td>Inactive Members</td>  
+                   <td>@InactiveMembers</td>  
+               </tr>  
+               <tr>  
+                   <td>Total Employees</td>  
+                   <td>@TotalEmployees</td>  
+               </tr>  
+               <tr>  
+                   <td>Total Classes</td>  
+                   <td>@TotalClasses</td>  
+               </tr>  
+           </tbody>  
+       </table>  
+
+       <!-- Table for Weekly statistics -->
+       <table style="width: 30%; margin-right: 20px;">  
+           <thead>  
+               <tr>  
+                   <th>Weekly</th>  
+               </tr>  
+               <tr>  
+                   <th>Category</th>  
+                   <th>Count</th>  
+               </tr>  
+           </thead>  
+           <tbody>  
+               <tr>  
+                   <td>Total Members</td>  
+                   <td>@TotalMembers</td>  
+               </tr>  
+               <tr>  
+                   <td>Active Members</td>  
+                   <td>@ActiveMembers</td>  
+               </tr>  
+               <tr>  
+                   <td>Inactive Members</td>  
+                   <td>@InactiveMembers</td>  
+               </tr>  
+               <tr>  
+                   <td>Total Employees</td>  
+                   <td>@TotalEmployees</td>  
+               </tr>  
+               <tr>  
+                   <td>Total Classes</td>  
+                   <td>@TotalClasses</td>  
+               </tr>  
+           </tbody>  
+       </table>  
+
+       <!-- Table for Monthly statistics -->
+       <table style="width: 30%;">  
+           <thead>  
+               <tr>  
+                   <th>Monthly</th>  
+               </tr>  
+               <tr>  
+                   <th>Category</th>  
+                   <th>Count</th>  
+               </tr>  
+           </thead>  
+           <tbody>  
+               <tr>  
+                   <td>Total Members</td>  
+                   <td>@TotalMembers</td>  
+               </tr>  
+               <tr>  
+                   <td>Active Members</td>  
+                   <td>@ActiveMembers</td>  
+               </tr>  
+               <tr>  
+                   <td>Inactive Members</td>  
+                   <td>@InactiveMembers</td>  
+               </tr>  
+               <tr>  
+                   <td>Total Employees</td>  
+                   <td>@TotalEmployees</td>  
+               </tr>  
+               <tr>  
+                   <td>Total Classes</td>  
+                   <td>@TotalClasses</td>  
+               </tr>  
+           </tbody>  
+       </table>  
+   </div>  
+}  
+
+@code {  
+// Indicates whether the user is logged in  
+private bool IsLoggedIn = false;  
+
+// Stores the Employee ID entered by the user  
+private string EmployeeID;  
+
+// Stores the name of the logged-in employee  
+private string EmployeeName;  
+
+// Stores any login error messages  
+private string LoginError;  
+
+// Indicates whether the profile menu is visible  
+private bool IsProfileMenuVisible = false;  
+
+// Statistics for the dashboard  
+private int TotalMembers;  
+private int ActiveMembers;  
+private int InactiveMembers;  
+private int TotalEmployees;  
+private int TotalClasses;  
+
+// Stores today's date in a formatted string  
+private string TodaysDate = DateTime.Now.ToString("MMMM dd, yyyy");  
+
+// Handles the login process  
+private async Task HandleLogin()  
+{  
+   if (string.IsNullOrWhiteSpace(EmployeeID))  
+   {  
+       LoginError = "Employee ID cannot be empty.";  
+       return;  
+   }  
+
+   var builder = new MySqlConnectionStringBuilder  
+   {  
+       Server = "localhost",  
+       UserID = "root",  
+       Password = "J@ckS@it!234",  
+       Database = "GymDB"  
+   };  
+
+   using var connection = new MySqlConnection(builder.ConnectionString);  
+   await connection.OpenAsync();  
+
+   using var command = connection.CreateCommand();  
+   command.CommandText = "SELECT Name FROM Employees WHERE EmployeeID = @EmployeeID";  
+   command.Parameters.AddWithValue("@EmployeeID", EmployeeID);  
+
+   var result = await command.ExecuteScalarAsync();  
+
+   if (result != null)  
+   {  
+       EmployeeName = result.ToString();  
+       IsLoggedIn = true;  
+       LoginError = null;  
+       await LoadDataFromDatabase();  
+   }  
+   else  
+   {  
+       LoginError = "Invalid Employee ID.";  
+   }  
+}  
+
+// Loads data for the dashboard from the database  
+private async Task LoadDataFromDatabase()  
+{  
+   var builder = new MySqlConnectionStringBuilder  
+   {  
+       Server = "localhost",  
+       UserID = "root",  
+       Password = "J@ckS@it!234",  
+       Database = "GymDB"  
+   };  
+
+   using var connection = new MySqlConnection(builder.ConnectionString);  
+   await connection.OpenAsync();  
+
+   using var command = connection.CreateCommand();  
+
+   // Fetch total members  
+   command.CommandText = "SELECT COUNT(*) FROM Members";  
+   TotalMembers = Convert.ToInt32(await command.ExecuteScalarAsync());  
+
+   // Fetch active members  
+   command.CommandText = "SELECT COUNT(*) FROM Members WHERE IsActive = 1";  
+   ActiveMembers = Convert.ToInt32(await command.ExecuteScalarAsync());  
+
+   // Fetch inactive members  
+   command.CommandText = "SELECT COUNT(*) FROM Members WHERE IsActive = 0";  
+   InactiveMembers = Convert.ToInt32(await command.ExecuteScalarAsync());  
+
+   // Fetch total employees  
+   command.CommandText = "SELECT COUNT(*) FROM Employees";  
+   TotalEmployees = Convert.ToInt32(await command.ExecuteScalarAsync());  
+
+   // Fetch total classes  
+   command.CommandText = "SELECT COUNT(*) FROM Classes";  
+   TotalClasses = Convert.ToInt32(await command.ExecuteScalarAsync());  
+
+   StateHasChanged(); // Ensure UI updates after loading data  
+}  
+
+// Toggles the visibility of the profile menu  
+private void ToggleProfileMenu()  
+{  
+   IsProfileMenuVisible = !IsProfileMenuVisible;  
+}  
+
+// Navigates to the profile page of the logged-in employee  
+private void ViewProfile()  
+{  
+   NavigationManager.NavigateTo($"/profile/{EmployeeID}");  
+}  
+
+// Handles the logout process  
+private void HandleLogout()  
+{  
+   IsLoggedIn = false;  
+   EmployeeID = string.Empty;  
+   EmployeeName = string.Empty;  
+   LoginError = null;  
+   IsProfileMenuVisible = false;  
+}  
+}

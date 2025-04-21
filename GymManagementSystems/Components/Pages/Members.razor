@@ -1,0 +1,192 @@
+﻿@page "/member"  
+@using MySqlConnector;  
+@inject NavigationManager NavigationManager  
+
+<!-- Page Header -->
+<h1>Members</h1>  
+
+<hr class="header-separator" />  
+
+<!-- Conditional Rendering for Members List -->
+@if (members == null)  
+{  
+ <!-- Display while members are being loaded -->
+ <p>Loading members...</p>  
+}  
+else if (!members.Any())  
+{  
+ <!-- Display if no members are found -->
+ <p>No members found.</p>  
+}  
+else  
+{  
+ <!-- Container for Active and Inactive Members -->
+ <div class="members-container">  
+
+     <!-- Active Members Section -->
+     <div class="active-members">  
+         <h2>Active Members</h2>  
+         @if (members.Any(m => m.IsActive))  
+         {  
+             <!-- Table for Active Members -->
+             <table>  
+                 <thead>  
+                     <tr>  
+                         <th>Member ID</th>  
+                         <th>Name</th>  
+                     </tr>  
+                 </thead>  
+                 <tbody>  
+                     @foreach (var member in members.Where(m => m.IsActive))  
+                     {  
+                         <tr>  
+                             <td>@member.MemberID</td>  
+                             <!-- Link to navigate to member profile -->
+                             <td><a href="#" @onclick="() => NavigateToProfile(member.MemberID)">@member.Name</a></td>  
+                         </tr>  
+                     }  
+                 </tbody>  
+             </table>  
+         }  
+         else  
+         {  
+             <!-- Display if no active members are found -->
+             <p>No active members found.</p>  
+         }  
+     </div>  
+
+     <!-- Inactive Members Section -->
+     <div class="inactive-members">  
+         <h2>Inactive Members</h2>  
+         @if (members.Any(m => !m.IsActive))  
+         {  
+             <!-- Table for Inactive Members -->
+             <table>  
+                 <thead>  
+                     <tr>  
+                         <th>Member ID</th>  
+                         <th>Name</th>  
+                     </tr>  
+                 </thead>  
+                 <tbody>  
+                     @foreach (var member in members.Where(m => !m.IsActive))  
+                     {  
+                         <tr>  
+                             <td>@member.MemberID</td>  
+                             <!-- Link to navigate to member profile -->
+                             <td><a href="#" @onclick="() => NavigateToProfile(member.MemberID)">@member.Name</a></td>  
+                         </tr>  
+                     }  
+                 </tbody>  
+             </table>  
+         }  
+         else  
+         {  
+             <!-- Display if no inactive members are found -->
+             <p>No inactive members found.</p>  
+         }  
+     </div>  
+ </div>  
+}  
+
+@code {  
+ // List to store members data
+ private List<Member> members;  
+
+ // Lifecycle method to initialize data
+ protected override async Task OnInitializedAsync()  
+ {  
+     await LoadDataFromDatabase();  
+ }  
+
+ // Method to load members data from the database
+ private async Task LoadDataFromDatabase()  
+ {  
+     var builder = new MySqlConnectionStringBuilder  
+     {  
+         Server = "localhost",  
+         UserID = "root",  
+         Password = "J@ckS@it!234", 
+         Database = "GymDB"  
+     };  
+
+     try  
+     {  
+         // Establish database connection
+         using var connection = new MySqlConnection(builder.ConnectionString);  
+         await connection.OpenAsync();  
+
+         // Query to fetch members data
+         var query = "SELECT MemberID, Name, IsActive FROM Members";  
+         using var command = new MySqlCommand(query, connection);  
+         using var reader = await command.ExecuteReaderAsync();  
+
+         // Populate members list
+         members = new List<Member>();  
+         while (await reader.ReadAsync())  
+         {  
+             members.Add(new Member  
+             {  
+                 MemberID = reader.GetInt32("MemberID"),  
+                 Name = reader.GetString("Name"),  
+                 IsActive = reader.GetBoolean("IsActive")  
+             });  
+         }  
+     }  
+     catch (Exception ex)  
+     {  
+         // Log error if data loading fails
+         Console.WriteLine($"Error loading members: {ex.Message}");  
+     }  
+ }  
+
+ // Method to navigate to a member's profile page
+ private void NavigateToProfile(int memberId)  
+ {  
+     NavigationManager.NavigateTo($"/member/profile/{memberId}");  
+ }  
+
+
+}  
+
+<style>  
+ /* Styling for members container */
+ .members-container {  
+     display: flex;  
+     justify-content: space-between;  
+     gap: 20px;  
+ }  
+
+ /* Styling for active and inactive members sections */
+ .active-members, .inactive-members {  
+     width: 45%;  
+     border: 1px solid #ccc;  
+     border-radius: 8px;  
+     padding: 10px;  
+     background-color: #f9f9f9;  
+ }  
+
+ /* Styling for tables */
+ table {  
+     width: 100%;  
+     border-collapse: collapse;  
+ }  
+
+ /* Styling for table headers and cells */
+ th, td {  
+     border: 1px solid #ddd;  
+     padding: 8px;  
+     text-align: left;  
+ }  
+
+ /* Styling for table header background */
+ th {  
+     background-color: #f2f2f2;  
+ }  
+
+ /* Styling for section headers */
+ h2 {  
+     text-align: center;  
+     color: #333;  
+ }  
+</style>

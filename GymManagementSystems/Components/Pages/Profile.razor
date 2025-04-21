@@ -1,0 +1,80 @@
+﻿@page "/profile/{EmployeeId}"  
+@using MySqlConnector  
+@inject NavigationManager NavigationManager  
+
+<h1>Employee Profile</h1>  
+<hr class="header-separator" />  
+
+@if (string.IsNullOrEmpty(EmployeeName))  
+{  
+   // Display a loading message while the profile data is being fetched  
+   <p>Loading profile...</p>  
+}  
+else  
+{  
+   // Display the employee profile details once the data is loaded  
+   <div class="profile-container" style="display: flex; flex-direction: column; align-items: center;">  
+       <img src="https://via.placeholder.com/150" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px; border: 2px solid black;" />  
+       <h2>@EmployeeName</h2>  
+       <p><strong>Employee ID:</strong> @EmployeeId</p>  
+       <p><strong>Position:</strong> @EmployeePosition</p>  
+       <button @onclick="NavigateToDashboard" style="margin-top: 20px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Back to Dashboard</button>  
+   </div>  
+}  
+
+@code {  
+   // Parameter to capture the EmployeeId from the route  
+   [Parameter] public string EmployeeId { get; set; }  
+
+   // Fields to store employee details  
+   private string EmployeeName;  
+   private string EmployeePosition;  
+
+   // Lifecycle method to initialize the component and load employee data  
+   protected override async Task OnInitializedAsync()  
+   {  
+       await LoadEmployeeProfile(EmployeeId);  
+   }  
+
+   // Method to load employee profile data from the database  
+   private async Task LoadEmployeeProfile(string employeeId)  
+   {  
+       // Build the MySQL connection string  
+       var builder = new MySqlConnectionStringBuilder  
+       {  
+           Server = "localhost",  
+           UserID = "root",  
+           Password = "J@ckS@it!234",  
+           Database = "GymDB"  
+       };  
+
+       // Open a connection to the database  
+       using var connection = new MySqlConnection(builder.ConnectionString);  
+       await connection.OpenAsync();  
+
+       // Create a command to fetch employee details  
+       using var command = connection.CreateCommand();  
+       command.CommandText = "SELECT Name, Position FROM Employees WHERE EmployeeID = @EmployeeID";  
+       command.Parameters.AddWithValue("@EmployeeID", employeeId);  
+
+       // Execute the command and read the results  
+       using var reader = await command.ExecuteReaderAsync();  
+       if (await reader.ReadAsync())  
+       {  
+           // Populate the fields with the fetched data  
+           EmployeeName = reader.GetString(0);  
+           EmployeePosition = reader.GetString(1);  
+       }  
+       else  
+       {  
+           // Redirect to the dashboard if the employee is not found  
+           NavigationManager.NavigateTo("/");  
+       }  
+   }  
+
+   // Method to navigate back to the dashboard  
+   private void NavigateToDashboard()  
+   {  
+       NavigationManager.NavigateTo("/");  
+   }  
+}

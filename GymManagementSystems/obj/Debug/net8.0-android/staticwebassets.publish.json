@@ -1,0 +1,846 @@
+{
+  "Version": 1,
+  "Hash": "yZ6Qwbn3pbHjBxnuG+se0Nr96OYOjPXx6HZx1lSUW0I=",
+  "Source": "GymManagementSystems",
+  "BasePath": "/",
+  "Mode": "Root",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GymManagementSystems\\wwwroot",
+      "Source": "GymManagementSystems",
+      "ContentRoot": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\",
+      "BasePath": "/",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\GymManagementSystems.styles.css",
+      "SourceId": "GymManagementSystems",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\",
+      "BasePath": "/",
+      "RelativePath": "GymManagementSystems#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "ptsf7jm55c",
+      "Integrity": "rXKAqUdL+UVvPQJdT6UWequ4BS2ZIwwaBtjtcDYiO6g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\GymManagementSystems.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\GymManagementSystems.bundle.scp.css",
+      "SourceId": "GymManagementSystems",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\",
+      "BasePath": "/",
+      "RelativePath": "GymManagementSystems#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "ptsf7jm55c",
+      "Integrity": "rXKAqUdL+UVvPQJdT6UWequ4BS2ZIwwaBtjtcDYiO6g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\GymManagementSystems.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\app.css",
+      "SourceId": "GymManagementSystems",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dex3usdpik",
+      "Integrity": "K1bY5kgLeD7nMlhLfmEK3TdjOVTQGBzyOIF4YwRlzuQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "SourceId": "GymManagementSystems",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/bootstrap/bootstrap.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6gzpyzhau4",
+      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "SourceId": "GymManagementSystems",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\site.css",
+      "SourceId": "GymManagementSystems",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ockha4cdcd",
+      "Integrity": "uKRKFUovy26un2tETFkc1VXAjwPgOJyfUq4tUM7hZBk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\favicon.png",
+      "SourceId": "GymManagementSystems",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\index.html",
+      "SourceId": "GymManagementSystems",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8apawnzerw",
+      "Integrity": "gNUNRYlwmkKvzmquBBpiGjMuTQ4xmaMJsgo8FhOx5Yk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/app.css",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3339"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K1bY5kgLeD7nMlhLfmEK3TdjOVTQGBzyOIF4YwRlzuQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 03:35:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-K1bY5kgLeD7nMlhLfmEK3TdjOVTQGBzyOIF4YwRlzuQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/app.dex3usdpik.css",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3339"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K1bY5kgLeD7nMlhLfmEK3TdjOVTQGBzyOIF4YwRlzuQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 03:35:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dex3usdpik"
+        },
+        {
+          "Name": "label",
+          "Value": "css/app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-K1bY5kgLeD7nMlhLfmEK3TdjOVTQGBzyOIF4YwRlzuQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.min.6gzpyzhau4.css",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6gzpyzhau4"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1969"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uKRKFUovy26un2tETFkc1VXAjwPgOJyfUq4tUM7hZBk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 19:38:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uKRKFUovy26un2tETFkc1VXAjwPgOJyfUq4tUM7hZBk="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.ockha4cdcd.css",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1969"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uKRKFUovy26un2tETFkc1VXAjwPgOJyfUq4tUM7hZBk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 19:38:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ockha4cdcd"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uKRKFUovy26un2tETFkc1VXAjwPgOJyfUq4tUM7hZBk="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "GymManagementSystems.bundle.scp.css",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\GymManagementSystems.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5481"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rXKAqUdL+UVvPQJdT6UWequ4BS2ZIwwaBtjtcDYiO6g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rXKAqUdL+UVvPQJdT6UWequ4BS2ZIwwaBtjtcDYiO6g="
+        }
+      ]
+    },
+    {
+      "Route": "GymManagementSystems.ptsf7jm55c.bundle.scp.css",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\obj\\Debug\\net8.0-android\\scopedcss\\projectbundle\\GymManagementSystems.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5481"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rXKAqUdL+UVvPQJdT6UWequ4BS2ZIwwaBtjtcDYiO6g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ptsf7jm55c"
+        },
+        {
+          "Name": "label",
+          "Value": "GymManagementSystems.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rXKAqUdL+UVvPQJdT6UWequ4BS2ZIwwaBtjtcDYiO6g="
+        }
+      ]
+    },
+    {
+      "Route": "GymManagementSystems.ptsf7jm55c.styles.css",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\GymManagementSystems.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5481"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rXKAqUdL+UVvPQJdT6UWequ4BS2ZIwwaBtjtcDYiO6g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ptsf7jm55c"
+        },
+        {
+          "Name": "label",
+          "Value": "GymManagementSystems.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rXKAqUdL+UVvPQJdT6UWequ4BS2ZIwwaBtjtcDYiO6g="
+        }
+      ]
+    },
+    {
+      "Route": "GymManagementSystems.styles.css",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\GymManagementSystems.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5481"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rXKAqUdL+UVvPQJdT6UWequ4BS2ZIwwaBtjtcDYiO6g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rXKAqUdL+UVvPQJdT6UWequ4BS2ZIwwaBtjtcDYiO6g="
+        }
+      ]
+    },
+    {
+      "Route": "index.8apawnzerw.html",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "897"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gNUNRYlwmkKvzmquBBpiGjMuTQ4xmaMJsgo8FhOx5Yk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8apawnzerw"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gNUNRYlwmkKvzmquBBpiGjMuTQ4xmaMJsgo8FhOx5Yk="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "897"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gNUNRYlwmkKvzmquBBpiGjMuTQ4xmaMJsgo8FhOx5Yk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 20:29:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gNUNRYlwmkKvzmquBBpiGjMuTQ4xmaMJsgo8FhOx5Yk="
+        }
+      ]
+    }
+  ]
+}

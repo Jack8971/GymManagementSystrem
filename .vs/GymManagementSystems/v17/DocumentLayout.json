@@ -1,0 +1,159 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|c:\\users\\jacks\\documents\\object_orienting_final_assignment\\gymmanagementsystems\\gymmanagementsystems\\components\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|solutionrelative:gymmanagementsystems\\components\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|c:\\users\\jacks\\documents\\object_orienting_final_assignment\\gymmanagementsystems\\gymmanagementsystems\\components\\pages\\members.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|solutionrelative:gymmanagementsystems\\components\\pages\\members.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|c:\\users\\jacks\\documents\\object_orienting_final_assignment\\gymmanagementsystems\\gymmanagementsystems\\components\\pages\\gymclasses.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|solutionrelative:gymmanagementsystems\\components\\pages\\gymclasses.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|c:\\users\\jacks\\documents\\object_orienting_final_assignment\\gymmanagementsystems\\gymmanagementsystems\\components\\pages\\membersprofile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|solutionrelative:gymmanagementsystems\\components\\pages\\membersprofile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|c:\\users\\jacks\\documents\\object_orienting_final_assignment\\gymmanagementsystems\\gymmanagementsystems\\components\\pages\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|solutionrelative:gymmanagementsystems\\components\\pages\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|c:\\users\\jacks\\documents\\object_orienting_final_assignment\\gymmanagementsystems\\gymmanagementsystems\\components\\pages\\gymclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|solutionrelative:gymmanagementsystems\\components\\pages\\gymclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|c:\\users\\jacks\\documents\\object_orienting_final_assignment\\gymmanagementsystems\\gymmanagementsystems\\components\\pages\\profile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92EA2C50-0186-4C31-B5D4-3528FC4C3C27}|GymManagementSystems\\GymManagementSystems.csproj|solutionrelative:gymmanagementsystems\\components\\pages\\profile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 283,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Member.cs",
+              "DocumentMoniker": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\Member.cs",
+              "RelativeDocumentMoniker": "GymManagementSystems\\Components\\Pages\\Member.cs",
+              "ToolTip": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\Member.cs",
+              "RelativeToolTip": "GymManagementSystems\\Components\\Pages\\Member.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T20:29:16.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GymClass.cs",
+              "DocumentMoniker": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\GymClass.cs",
+              "RelativeDocumentMoniker": "GymManagementSystems\\Components\\Pages\\GymClass.cs",
+              "ToolTip": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\GymClass.cs",
+              "RelativeToolTip": "GymManagementSystems\\Components\\Pages\\GymClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T20:28:08.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Profile.razor",
+              "DocumentMoniker": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\Profile.razor",
+              "RelativeDocumentMoniker": "GymManagementSystems\\Components\\Pages\\Profile.razor",
+              "ToolTip": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\Profile.razor",
+              "RelativeToolTip": "GymManagementSystems\\Components\\Pages\\Profile.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-19T02:07:39.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MembersProfile.razor",
+              "DocumentMoniker": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\MembersProfile.razor",
+              "RelativeDocumentMoniker": "GymManagementSystems\\Components\\Pages\\MembersProfile.razor",
+              "ToolTip": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\MembersProfile.razor",
+              "RelativeToolTip": "GymManagementSystems\\Components\\Pages\\MembersProfile.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-18T18:19:47.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GymClasses.razor",
+              "DocumentMoniker": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\GymClasses.razor",
+              "RelativeDocumentMoniker": "GymManagementSystems\\Components\\Pages\\GymClasses.razor",
+              "ToolTip": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\GymClasses.razor",
+              "RelativeToolTip": "GymManagementSystems\\Components\\Pages\\GymClasses.razor",
+              "ViewState": "AgIAABEBAAAAAAAAAAAAADIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-17T20:36:01.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Members.razor",
+              "DocumentMoniker": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\Members.razor",
+              "RelativeDocumentMoniker": "GymManagementSystems\\Components\\Pages\\Members.razor",
+              "ToolTip": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\Members.razor",
+              "RelativeToolTip": "GymManagementSystems\\Components\\Pages\\Members.razor",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-17T20:35:21.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.razor",
+              "DocumentMoniker": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\Dashboard.razor",
+              "RelativeDocumentMoniker": "GymManagementSystems\\Components\\Pages\\Dashboard.razor",
+              "ToolTip": "C:\\Users\\jacks\\Documents\\Object_Orienting_Final_Assignment\\GymManagementSystems\\GymManagementSystems\\Components\\Pages\\Dashboard.razor",
+              "RelativeToolTip": "GymManagementSystems\\Components\\Pages\\Dashboard.razor",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAAAPoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-17T20:29:49.082Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 117,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

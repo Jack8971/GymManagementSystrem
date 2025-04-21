@@ -1,0 +1,146 @@
+﻿@page "/Member/profile/{MemberID:int}"  
+@using MySqlConnector  
+@inject NavigationManager NavigationManager  
+
+<h1>Member Profile</h1>  
+
+@if (member == null)  
+{  
+ // Display a loading message while member details are being fetched  
+ <p>Loading member details...</p>  
+}  
+else  
+{  
+ // Display the member's profile details once loaded  
+ <div class="profile-container">  
+     <img src="https://via.placeholder.com/150" alt="" class="profile-image" />  
+     <div class="profile-details">  
+         <h2>@member.Name</h2>  
+
+         @* // Show the member's status (Active/Inactive)   *@
+         <p><strong>Status:</strong> @(member.IsActive ? "Active" : "Inactive")</p>  
+     </div>  
+ </div>  
+}  
+
+@* Button to navigate back to the members list   *@
+<button @onclick="NavigateBack">Back to Members</button>  
+
+@code {  
+ // Parameter to capture the MemberID from the route  
+ [Parameter] public int MemberID { get; set; }  
+
+ // Holds the member details fetched from the database  
+ private Member member;  
+
+ // Lifecycle method that runs when the component is initialized  
+ protected override async Task OnInitializedAsync()  
+ {  
+     await LoadMemberDetails();  
+ }  
+
+ // Method to load member details from the database  
+ private async Task LoadMemberDetails()  
+ {  
+     // Build the connection string for the MySQL database  
+     var builder = new MySqlConnectionStringBuilder  
+     {  
+         Server = "localhost",  
+         UserID = "root",  
+         Password = "J@ckS@it!234",  
+         Database = "GymDB"  
+     };  
+
+     try  
+     {  
+         // Open a connection to the database  
+         using var connection = new MySqlConnection(builder.ConnectionString);  
+         await connection.OpenAsync();  
+
+         // Query to fetch member details by MemberID  
+         var query = "SELECT MemberID, Name, IsActive FROM Members WHERE MemberID = @MemberID";  
+         using var command = new MySqlCommand(query, connection);  
+         command.Parameters.AddWithValue("@MemberID", MemberID);  
+
+         // Execute the query and read the results  
+         using var reader = await command.ExecuteReaderAsync();  
+         if (await reader.ReadAsync())  
+         {  
+             // Map the database result to the Member object  
+             member = new Member  
+             {  
+                 MemberID = reader.GetInt32("MemberID"),  
+                 Name = reader.GetString("Name"),    
+                 IsActive = reader.GetBoolean("IsActive")  
+             };  
+         }  
+     }  
+     catch (Exception ex)  
+     {  
+         // Log any errors that occur during the database operation  
+         Console.WriteLine($"Error loading member details: {ex.Message}");  
+     }  
+ }  
+
+ // Method to navigate back to the members list page  
+ private void NavigateBack()  
+ {  
+     NavigationManager.NavigateTo("/member");  
+ }  
+
+ 
+}  
+
+<style>  
+ /* Styles for the profile container layout */  
+ .profile-container {  
+     display: flex;  
+     align-items: center;  
+     gap: 20px;  
+     padding: 20px;  
+     border: 1px solid #ccc;  
+     border-radius: 8px;  
+     background-color: #f9f9f9;  
+ }  
+
+ /* Styles for the profile image */  
+ .profile-image {  
+     width: 150px;  
+     height: 150px;  
+     border-radius: 50%;  
+     border: 2px solid #ddd;  
+ }  
+
+ /* Styles for the profile details section */  
+ .profile-details {  
+     flex: 1;  
+ }  
+
+ /* Styles for the member name */  
+ h2 {  
+     margin: 0;  
+     color: #333;  
+ }  
+
+ /* Styles for the member status text */  
+ p {  
+     margin: 5px 0;  
+     color: #555;  
+ }  
+
+ /* Styles for the back button */  
+ button {  
+     margin-top: 20px;  
+     padding: 10px 20px;  
+     background-color: #007bff;  
+     color: white;  
+     border: none;  
+     border-radius: 5px;  
+     cursor: pointer;  
+ }  
+
+ /* Hover effect for the back button */  
+ button:hover {  
+     background-color: #0056b3;  
+ }  
+</style>

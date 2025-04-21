@@ -1,0 +1,308 @@
+﻿@page "/GymClass"  
+@using MySqlConnector;  
+
+<!-- Page Header -->
+<h1>Gym Classes - Monthly View (@currentMonthName @currentYear)</h1>  
+
+<hr class="header-separator" />  
+
+<!-- Navigation Buttons for Calendar -->
+<div class="calendar-navigation">  
+ <button @onclick="ShowPreviousMonth">Previous</button>  
+ <button @onclick="ShowNextMonth">Next</button>  
+</div>  
+
+@if (gymClasses == null)  
+{  
+ <!-- Loading Indicator -->
+ <p><em>Loading...</em></p>  
+}  
+else  
+{  
+ <!-- Calendar Container -->
+ <div class="calendar-container">  
+     <!-- Calendar Header with Days of the Week -->
+     <div class="calendar-header">  
+         <div>Sunday</div>  
+         <div>Monday</div>  
+         <div>Tuesday</div>  
+         <div>Wednesday</div>  
+         <div>Thursday</div>  
+         <div>Friday</div>  
+         <div>Saturday</div>  
+     </div>  
+
+     <!-- Calendar Body with Days and Classes -->
+     <div class="calendar-body">  
+         @for (int day = 1; day <= DateTime.DaysInMonth(currentYear, currentMonth); day++)  
+         {  
+             var date = new DateTime(currentYear, currentMonth, day);  
+             var dayClasses = gymClasses.Where(gc => gc.Date.Date == date.Date).ToList();  
+             var dayOfWeek = (int)date.DayOfWeek;  
+
+             if (day == 1)  
+             {  
+                 <!-- Fill Previous Month Days -->
+                 var previousMonth = currentMonth == 1 ? 12 : currentMonth - 1;  
+                 var previousYear = currentMonth == 1 ? currentYear - 1 : currentYear;  
+                 var daysInPreviousMonth = DateTime.DaysInMonth(previousYear, previousMonth);  
+
+                 for (int i = dayOfWeek - 1; i >= 0; i--)  
+                 {  
+                     var prevDate = new DateTime(previousYear, previousMonth, daysInPreviousMonth - i);  
+                     var prevDayClasses = gymClasses.Where(gc => gc.Date.Date == prevDate.Date).ToList();  
+
+                     <!-- Render Previous Month Day -->
+                     <div class="calendar-day previous-month">  
+                         <h3>@prevDate.Day</h3>  
+
+                         @if (prevDayClasses.Any())  
+                         {  
+                             <!-- Render Classes for Previous Month Day -->
+                             @foreach (var gymClass in prevDayClasses)  
+                             {  
+                                 <div class="calendar-item">  
+                                     <h4>@gymClass.Name</h4>
+                                      <p>Instructor</p>
+                                      <p>@gymClass.Instructor</p>  
+                                     <p>@gymClass.Time.ToString(@"hh\:mm")</p>  
+                                 </div>  
+                             }  
+                         }  
+                         else  
+                         {  
+                             <p>No classes</p>  
+                         }  
+                     </div>  
+                 }  
+             }  
+
+             <!-- Render Current Month Day -->
+             <div class="calendar-day">  
+                 <h3>@date.Day</h3>  
+
+                 @if (dayClasses.Any())  
+                 {  
+                     <!-- Render Classes for Current Month Day -->
+                     @foreach (var gymClass in dayClasses)  
+                     {  
+                         <div class="calendar-item">  
+                             <h4>@gymClass.Name</h4>
+                              <p>Instructor</p>
+                             <p>@gymClass.Instructor</p>  
+                             <p>@gymClass.Time.ToString(@"hh\:mm")</p>  
+                         </div>  
+                     }  
+                 }  
+                 else  
+                 {  
+                     <p>No classes</p>  
+                 }  
+             </div>  
+
+             if (day == DateTime.DaysInMonth(currentYear, currentMonth) && dayOfWeek != 6)  
+             {  
+                 <!-- Fill Next Month Days -->
+                 var nextMonth = currentMonth == 12 ? 1 : currentMonth + 1;  
+                 var nextYear = currentMonth == 12 ? currentYear + 1 : currentYear;  
+                 var nextDay = 1;  
+
+                 for (int i = dayOfWeek + 1; i <= 6; i++)  
+                 {  
+                     var nextDate = new DateTime(nextYear, nextMonth, nextDay++);  
+                     var nextDayClasses = gymClasses.Where(gc => gc.Date.Date == nextDate.Date).ToList();  
+
+                     <!-- Render Next Month Day -->
+                     <div class="calendar-day next-month">  
+                         <h3>@nextDate.Day</h3>  
+
+                         @if (nextDayClasses.Any())  
+                         {  
+                             <!-- Render Classes for Next Month Day -->
+                             @foreach (var gymClass in nextDayClasses)  
+                             {  
+                                 <div class="calendar-item">  
+                                     <h4>@gymClass.Name</h4>  
+                                     <p>Instructor</p>
+                                     <p>@gymClass.Instructor</p>  
+                                     <p>@gymClass.Time.ToString(@"hh\:mm")</p>  
+                                 </div>  
+                             }  
+                         }  
+                         else  
+                         {  
+                             <p>No classes</p>  
+                         }  
+                     </div>  
+                 }  
+             }  
+         }  
+     </div>  
+ </div>  
+ <div style="height: 50px;"></div> <!-- Added white space -->
+}  
+
+<style>  
+/* Styles for Calendar Navigation Buttons */
+.calendar-navigation {  
+ display: flex;  
+ justify-content: space-between;  
+ margin-bottom: 16px;  
+}  
+
+/* Styles for Calendar Container */
+.calendar-container {  
+ display: flex;  
+ flex-direction: column;  
+ gap: 8px;  
+}  
+
+/* Styles for Calendar Header */
+.calendar-header {  
+ display: grid;  
+ grid-template-columns: repeat(7, 1fr);  
+ text-align: center;  
+ font-weight: bold;  
+ background-color: #f0f0f0;  
+ padding: 8px 0;  
+}  
+
+/* Styles for Calendar Body */
+.calendar-body {  
+ display: grid;  
+ grid-template-columns: repeat(7, 1fr);  
+ gap: 4px;  
+}  
+
+/* Styles for Individual Calendar Days */
+.calendar-day {  
+ border: 1px solid #ccc;  
+ border-radius: 4px;  
+ padding: 8px;  
+ text-align: center;  
+ background-color: #f9f9f9;  
+}  
+
+/* Styles for Previous and Next Month Days */
+.calendar-day.previous-month,  
+.calendar-day.next-month {  
+ background-color: #eaeaea;  
+ color: #aaa;  
+}  
+
+/* Styles for Day Number */
+.calendar-day h3 {  
+ margin: 0;  
+ font-size: 1.2em;  
+}  
+
+/* Styles for Calendar Items (Classes) */
+.calendar-item {  
+ margin-top: 8px;  
+ border: 1px solid #ddd;  
+ border-radius: 4px;  
+ padding: 8px;  
+ background-color: #fff;  
+}  
+
+/* Styles for Class Name */
+.calendar-item h4 {  
+ margin: 0;  
+ font-size: 1em;  
+}  
+
+/* Styles for Class Details */
+.calendar-item p {  
+ margin: 4px 0 0;  
+ font-size: 0.9em;  
+ color: #555;  
+}  
+</style>  
+
+@code {  
+// Array to store gym classes loaded from the database
+private GymClass[]? gymClasses;  
+
+// Current year and month for the calendar
+private int currentYear = DateTime.Now.Year;  
+private int currentMonth = DateTime.Now.Month;  
+
+// Current month name for display
+private string currentMonthName => new DateTime(currentYear, currentMonth, 1).ToString("MMMM");  
+
+// Load data from the database when the component is initialized
+protected override async Task OnInitializedAsync()  
+{  
+ await LoadDataFromDatabase();  
+}  
+
+// Method to load gym classes from the database
+private async Task LoadDataFromDatabase()  
+{  
+ var builder = new MySqlConnectionStringBuilder  
+ {  
+     Server = "localhost",  
+     UserID = "root",  
+     Password = "J@ckS@it!234",  
+     Database = "GymDB"  
+ };  
+
+ try  
+ {  
+     using var connection = new MySqlConnection(builder.ConnectionString);  
+     await connection.OpenAsync();  
+
+     var query = "SELECT ClassName, Employees.Name AS Name, ClassDate, ClassTime FROM classes INNER JOIN employees ON InstructorID = EmployeeID";  
+     using var command = new MySqlCommand(query, connection);  
+     using var reader = await command.ExecuteReaderAsync();  
+
+     var classes = new List<GymClass>();  
+     while (await reader.ReadAsync())  
+     {  
+         classes.Add(new GymClass  
+         {  
+             Name = reader.GetString("ClassName"),  
+             Instructor = reader.GetString("Name"),  
+             Date = reader.GetDateTime("ClassDate"),  
+             Time = reader.GetTimeSpan("ClassTime"),  
+         });  
+     }  
+
+     gymClasses = classes.ToArray();  
+ }  
+ catch (Exception ex)  
+ {  
+     Console.WriteLine($"Error loading data: {ex.Message}");  
+ }  
+}  
+
+// Navigate to the next month
+private void ShowNextMonth()  
+{  
+ if (currentMonth == 12)  
+ {  
+     currentMonth = 1;  
+     currentYear++;  
+ }  
+ else  
+ {  
+     currentMonth++;  
+ }  
+}  
+
+// Navigate to the previous month
+private void ShowPreviousMonth()  
+{  
+ if (currentMonth == 1)  
+ {  
+     currentMonth = 12;  
+     currentYear--;  
+ }  
+ else  
+ {  
+     currentMonth--;  
+ }  
+}  
+
+ 
+}
